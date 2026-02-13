@@ -1,24 +1,27 @@
-# 1. README faylını yarat
+# 1. Create README.md in English
 cat << 'EOF' > README.md
-# Linux Permissions and Special Modes
+# Linux Permissions
 
-Bu layihə Linux əməliyyat sistemində fayl və qovluq icazələrinin idarə edilməsi, istifadəçi qrupları və xüsusi icazə rejimlərinin (SUID, SGID, Sticky Bit) dərindən öyrənilməsinə həsr olunmuşdur.
+This project is dedicated to understanding file and directory permissions in Linux, managing user groups, and exploring special permission modes such as SUID and SGID.
 
-## 📖 Öyrənmə Hədəfləri
-Bu layihənin sonunda aşağıdakı mövzuları izah edə bilməliyik:
-* **İcazə Qrupları:** Linux-da 3 əsas icazə qrupu (Owner, Group, Others).
-* **Əmrlər:** `chmod`, `sudo`, `su`, `chown`, `chgrp`, `id`, `groups` və s. əmrlərinin istifadəsi.
-* **Xüsusi İcazələr:** `SUID` (Set User ID) və `SGID` (Set Group ID) anlayışları və onların təhlükəsizlikdə rolu.
-* **Fərqlər:** `chown` (sahibi dəyişmək) və `chgrp` (qrupu dəyişmək) arasındakı fərqlər.
-* **Umask:** Standart fayl icazələrini təyin edən `umask` dəyəri və onun hesablanması.
-* **Təhlükəsizlik:** Fayl icazələrinin idarə edilməsində ən yaxşı təcrübələr.
+## 📖 Learning Objectives
+By the end of this project, the goal is to be able to explain:
+* **Permission Groups:** The three user-based permission groups in Linux (Owner, Group, Others).
+* **Commands:** The usage of `chmod`, `sudo`, `su`, `chown`, `chgrp`, `id`, and `groups`.
+* **Special Permissions:** The purpose of `setuid` and `setgid` in Linux file permissions and how to use them.
+* **Differences:** The distinction between the `chown` and `chgrp` commands.
+* **Umask:** What Umask is and how to use it effectively.
+* **Security:** Best practices for managing file permissions and how to audit changes.
 
-## 🛠 Tələblər
-* Bütün skriptlər **Kali Linux** üzərində test edilir.
-* Skriptlərin ilk sətri `#!/bin/bash` olmalıdır.
-* Kodlar **Betty** stilinə və ya uyğun standartlara cavab verməlidir.
-* Backticks (\`), `&&` və ya `||` operatorlarından istifadəyə icazə verilmir (xüsusi tapşırıqlarda).
+## 🛠 Requirements
+* All scripts are tested on **Kali Linux**.
+* The first line of all files must be exactly `#!/bin/bash`.
+* All files must end with a new line.
+* **Forbidden:** You are not allowed to use backticks, `&&`, or `||`.
+* All files must be executable.
+* Code should follow the **Betty** style.
 
-## 📂 Fayl Strukturu
-Layihə ərzində yaradılacaq skriptlər fayl icazələrini dəyişdirmək, istifadəçi yaratmaq və qrup hüquqlarını idarə etmək funksiyalarını yerinə yetirəcək.
+## 📂 Repository Information
+* **GitHub Repository:** holbertonschool-cyber_security
+* **Project:** Linux Permissions
 EOF
