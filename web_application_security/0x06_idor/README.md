@@ -29,12 +29,6 @@ Change the [YOUR_ID] parameter in the URL to the target user's ID (e.g., 20e13cb
 
 Forward the request. The server responds with the target's private information.
 
-Evidence:
-
-Request/Response Snippet: [Bura birinci tapşırıqdakı JSON cavabını əlavə et]
-
-Screenshot: [Bura ekran görüntüsü əlavə et]
-
 Vulnerability 2: IDOR on Card Information API
 Description: Similar to the customer info endpoint, the POST /api/cards/info endpoint relies solely on the cards_id provided in the JSON body without checking ownership.
 
@@ -47,10 +41,6 @@ Capture a valid request to /api/cards/info.
 Modify the JSON payload replacing your cards_id with the victim's cards_id (e.g., "9de7fd8c155c447cb8de176a6a667700").
 
 The server returns the full, unmasked credit card details of the victim.
-
-Evidence:
-
-Request/Response Snippet: [Bura CVV və kart nömrəsi olan JSON-u əlavə et]
 
 Vulnerability 3: 3D Secure (OTP) Authentication Bypass / Business Logic Flaw
 Description: The 3D Secure payment confirmation process is vulnerable to parameter manipulation. The OTP validation endpoint trusts the sender_id or account_id provided in the client's POST request rather than relying on a secure, server-side session tied to the pending transaction.
@@ -68,10 +58,6 @@ Intercept the POST request sent upon clicking "Confirm".
 In the JSON payload, replace the victim's ID parameters with your own attacker ID.
 
 Forward the request. The transaction completes successfully.
-
-Evidence:
-
-Request Snippet: [Bura dəyişdirdiyin o sonuncu POST payload-unu əlavə et]
 
 4. Recommendations
 To remediate these critical vulnerabilities, the CyberBank development team should implement the following:
